@@ -1,4 +1,4 @@
-// 1 Look Oll:
+ // 1 Look Oll:
 
 alg1 = function(){
   algorithm("(R U2) (R2 F R F') U2 (R' F R F')");
