@@ -267,30 +267,30 @@ sameArray = function(arr1, arr2){
 
 findEdge = function(colors){
   switch(colors.sort().join(',')){
-    case [grid[0][1],grid[4][7]].sort().join(','):
-    return [1,grid[4][7]];
-    case [grid[3][1],grid[4][3]].sort().join(','):
-    return [2,grid[4][3]];
-    case [grid[2][1],grid[4][1]].sort().join(','):
-    return [3,grid[4][1]];
-    case [grid[1][1],grid[4][5]].sort().join(','):
-    return [4,grid[4][5]];
-    case [grid[0][5],grid[1][3]].sort().join(','):
-    return [5,grid[0][5]];
-    case [grid[0][3],grid[3][5]].sort().join(','):
-    return [6,grid[0][3]];
-    case [grid[3][3],grid[2][5]].sort().join(','):
-    return [7,grid[2][5]];
-    case [grid[1][5],grid[2][3]].sort().join(','):
-    return [8,grid[2][3]];
-    case [grid[0][7],grid[5][1]].sort().join(','):
-    return [9,grid[5][1]];
-    case [grid[3][7],grid[5][3]].sort().join(','):
-    return [10,grid[5][3]];
-    case [grid[2][7],grid[5][7]].sort().join(','):
-    return [11,grid[5][7]];
-    case [grid[1][7],grid[5][5]].sort().join(','):
-    return [12,grid[5][5]];
+    case [grid[0][1], grid[4][7]].sort().join(','):
+    return [1, grid[4][7]];
+    case [grid[3][1], grid[4][3]].sort().join(','):
+    return [2, grid[4][3]];
+    case [grid[2][1], grid[4][1]].sort().join(','):
+    return [3, grid[4][1]];
+    case [grid[1][1], grid[4][5]].sort().join(','):
+    return [4, grid[4][5]];
+    case [grid[0][5], grid[1][3]].sort().join(','):
+    return [5, grid[0][5]];
+    case [grid[0][3], grid[3][5]].sort().join(','):
+    return [6, grid[0][3]];
+    case [grid[3][3], grid[2][5]].sort().join(','):
+    return [7, grid[2][5]];
+    case [grid[1][5], grid[2][3]].sort().join(','):
+    return [8, grid[2][3]];
+    case [grid[0][7], grid[5][1]].sort().join(','):
+    return [9, grid[5][1]];
+    case [grid[3][7], grid[5][3]].sort().join(','):
+    return [10, grid[5][3]];
+    case [grid[2][7], grid[5][7]].sort().join(','):
+    return [11, grid[5][7]];
+    case [grid[1][7], grid[5][5]].sort().join(','):
+    return [12, grid[5][5]];
     default:
     return null;
   }

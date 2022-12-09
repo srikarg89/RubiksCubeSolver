@@ -6,10 +6,10 @@ To run the code, simply open the *index.html* file in your browser.
 In the console (for example in Chrome Devtools) enter one of the following actions to perform that action on the cube.
 
 - `mixup()`
-    - Mix up the cube with a random set of 20 moves, prints out the mixup string.
+    - Mix up the cube with a random set of 20 moves, returns the mixup string.
 - `solveCube()`
-    - Solve the cube from start to finish, prints out the solution string.
+    - Solve the cube from start to finish, returns the solution string.
 - `solveCross()`, `solveF2L()`, `solveOll()`, `solvePll()`
-    - Solve the individual components of the Rubik's Cube.
+    - Solves the individual components of the Rubik's Cube using the CFOP method.
 - `right()`, `rightPrime()`... (find all moves in *moves.js*)
     - Perform individual moves on the Rubik's Cube.

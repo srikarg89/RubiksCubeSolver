@@ -282,25 +282,24 @@ findCase = function(){
     return false;
   }
 }
-  solvePll = function(){
-    outer: for(var i = 0; i < 4; i++){
-      up();
-      for(var j = 0; j < 4; j++){
-        if(findCase()){
-          break outer;
-        }
-        turnCubeRight();
+
+solvePll = function(){
+  outer: for(var i = 0; i < 4; i++){
+    up();
+    for(var j = 0; j < 4; j++){
+      if(findCase()){
+        break outer;
       }
+      turnCubeRight();
     }
   }
+}
 
-  function getAllFunctions(){
-          var allfunctions=[];
-            for ( var i in window) {
-          if((typeof window[i]).toString()=="function"){
-              allfunctions.push(window[i].name);
-            }
-         }
-      }
-
-  getAllFunctions();
+getAllFunctions = function(){
+  var allfunctions=[];
+  for (var i in window) {
+    if((typeof window[i]).toString()=="function"){
+      allfunctions.push(window[i].name);
+    }
+  }
+}

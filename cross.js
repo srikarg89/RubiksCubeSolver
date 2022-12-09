@@ -1,6 +1,3 @@
-//let solveCount = 0;
-//let bottomColor = grid[5][4];
-
 checkFinishedCross = function(){
   let bottomColor = grid[5][4];
   if(grid[5][1] != bottomColor || grid[5][3] != bottomColor || grid[5][5] != bottomColor || grid[5][7] != bottomColor){
