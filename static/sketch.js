@@ -1,11 +1,11 @@
 /* Colors:
-	 * 0 = Blue
-	 * 1 = Red
-	 * 2 = Green
-	 * 3 = Orange
-	 * 4 = Yellow
-	 * 5 = White
-	 */
+  * 0 = Blue
+  * 1 = Red
+  * 2 = Green
+  * 3 = Orange
+  * 4 = Yellow
+  * 5 = White
+*/
 
 //Grid with cube stuff
 
@@ -111,34 +111,34 @@ drawIt = function(side, num, x, y){
   rectMode(CENTER);
   switch(side){
     case 0:
-    translate(0,0,1.5*size);
-    rect(x,y,size,size);
-    break;
+      translate(0,0,1.5*size);
+      rect(x,y,size,size);
+      break;
     case 1:
-    rotateY(PI/2);
-    translate(0,0,1.5*size);
-    rect(x,y,size,size);
-    break;
+      rotateY(PI/2);
+      translate(0,0,1.5*size);
+      rect(x,y,size,size);
+      break;
     case 2:
-    rotateY(PI);
-    translate(0,0,1.5*size);
-    rect(x,y,size,size);
-    break;
+      rotateY(PI);
+      translate(0,0,1.5*size);
+      rect(x,y,size,size);
+      break;
     case 3:
-    rotateY(-PI/2);
-    translate(0,0,1.5*size);
-    rect(x,y,size,size);
-    break;
+      rotateY(-PI/2);
+      translate(0,0,1.5*size);
+      rect(x,y,size,size);
+      break;
     case 4:
-    rotateX(PI/2);
-    translate(0,0,1.5*size);
-    rect(x,y,size,size);
-    break;
+      rotateX(PI/2);
+      translate(0,0,1.5*size);
+      rect(x,y,size,size);
+      break;
     case 5:
-    rotateX(-PI/2);
-    translate(0,0,1.5*size);
-    rect(x,y,size,size);
-    break;
+      rotateX(-PI/2);
+      translate(0,0,1.5*size);
+      rect(x,y,size,size);
+      break;
   }
   pop();
 }

@@ -9,7 +9,7 @@ In the console (for example in Chrome Devtools) enter one of the following actio
     - Mix up the cube with a random set of 20 moves, returns the mixup string.
 - `solveCube()`
     - Solve the cube from start to finish, returns the solution string.
-- `solveCross()`, `solveF2L()`, `solveOll()`, `solvePll()`
+- `solveCrossJS()`, `solveF2LJS()`, `solveOllJS()`, `solvePllJS()`
     - Solves the individual components of the Rubik's Cube using the CFOP method.
 - `right()`, `rightPrime()`... (find all moves in *moves.js*)
     - Perform individual moves on the Rubik's Cube.
