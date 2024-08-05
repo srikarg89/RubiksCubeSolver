@@ -49,6 +49,8 @@ def solve_cross(cube: Cube, minimize_moves=True):
 
     # Apply the best permutation.
     solve_cross_given_permutation(cube, fewest_turn_permutation)
+    # Run this to undo any rotations, ensuring that cross is on the bottom.
+    cube.remove_cube_rotations_from_move_history()
 
 
 def solve_f2l_given_permutation(cube: Cube, permutation: Iterable[Color]):    
@@ -87,6 +89,8 @@ def solve_f2l(cube: Cube, minimize_moves=True):
 
     # Apply the best permutation.
     solve_f2l_given_permutation(cube, fewest_turn_permutation)
+    # Run this to undo any rotations, ensuring that cross is on the bottom.
+    cube.remove_cube_rotations_from_move_history()
 
 
 def solve_oll(cube: Cube):
@@ -99,6 +103,8 @@ def solve_oll(cube: Cube):
     # Check if any of the OLL orientations will match. Rotate the cube in all directions.
     for _ in range(4):
         if detect_and_run_oll_case(cube):
+            # Run this to undo any rotations, ensuring that cross is on the bottom.
+            cube.remove_cube_rotations_from_move_history()
             return
         cube.run_movement(Movement.YAW_CUBE_CW)
     raise RuntimeError("Failed to solve OLL")
@@ -119,6 +125,8 @@ def solve_pll(cube: Cube):
     for _ in range(4):
         for _ in range(4):
             if detect_and_run_pll_case(cube):
+                # Run this to undo any rotations, ensuring that cross is on the bottom.
+                cube.remove_cube_rotations_from_move_history()
                 return
             cube.run_movement(Movement.YAW_CUBE_CW)
         cube.run_movement(Movement.UP)

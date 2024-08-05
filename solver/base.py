@@ -573,7 +573,7 @@ class Cube:
             return None
         return len(self.moves_history) - min(rev_indices) - 1
 
-    def _remove_cube_rotations_from_move_history(self):
+    def remove_cube_rotations_from_move_history(self):
         # Dictionaries mapping moves with cube rotations to identical moves without the cube rotations. pitch = x, yaw = y, roll = z.
         reversed_rotations = []
         R, L, U, D, F, B = (
@@ -639,8 +639,14 @@ class Cube:
         self.moves_history = quads_removed
 
     def simplify_move_history(self):
-        self._remove_cube_rotations_from_move_history()
+        self.remove_cube_rotations_from_move_history()
         self._remove_quads_from_move_history()
+
+    def mix_up(self, num_moves=25) -> "Cube":
+        random_move_choices = [Movement.UP, Movement.DOWN, Movement.FRONT, Movement.BACK, Movement.RIGHT, Movement.LEFT]
+        for _ in range(num_moves):
+            move = random.choice(random_move_choices)
+            self.run_movement(move)
 
 
 def check_config_matches(current: List[Color], config: List[Color]) -> bool:
@@ -668,11 +674,3 @@ def realign_cube(cube: Cube, front_color: Color):
         cube.run_movement(Movement.YAW_CUBE_CW)
         return
     raise ValueError(f"Front color {front_color} is not one of the four front-back / right-left colors")
-
-def get_randomly_mixed_up_cube() -> "Cube":
-    cube = Cube.default()
-    random_move_choices = [Movement.UP, Movement.DOWN, Movement.FRONT, Movement.BACK, Movement.RIGHT, Movement.LEFT]
-    for _ in range(25):
-        move = random.choice(random_move_choices)
-        cube.run_movement(move)
-    return cube

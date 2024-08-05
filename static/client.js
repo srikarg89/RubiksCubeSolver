@@ -33,6 +33,17 @@ function makeMove(move){
     });
 }
 
+function mixUp(){
+    const inputData = {
+        cube_string: getCubeString(),
+    };
+
+    sendRequest("/mixup", inputData, (data) => {
+        console.log("Moves taken to mix up: " + data.moves);
+        setCubeFromString(data.cube_string);
+    });
+}
+
 function solveCross(){
     const inputData = {
         cube_string: getCubeString(),

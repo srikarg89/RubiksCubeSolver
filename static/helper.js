@@ -1,7 +1,6 @@
-// let exampleString = "0 4 0 1 0 5 3 3 1 4 4 4 0 1 5 5 3 5 1 4 4 1 2 5 1 2 5 0 0 5 3 3 4 2 5 4 1 0 2 1 4 3 3 2 3 2 0 0 2 5 2 3 1 2";
+// Example string: "0 4 0 1 0 5 3 3 1 4 4 4 0 1 5 5 3 5 1 4 4 1 2 5 1 2 5 0 0 5 3 3 4 2 5 4 1 0 2 1 4 3 3 2 3 2 0 0 2 5 2 3 1 2";
 setCubeFromString = function(input){
     inputArray = input.split(' ');
-    // assert(inputArray.length == NUM_SIDES * SIDE_LENGTH, "Argument for setCubeFromString should have 54 separated numbers. Input was: " + input);
     inputArray = inputArray.map(x => int(x));
     for(let i = 0; i < NUM_SIDES; i++){
         for(let j = 0; j < SIDE_LENGTH; j++){
